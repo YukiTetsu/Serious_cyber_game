@@ -1,6 +1,6 @@
 CyberSecurity Serious Game
 
-Description
+Descriptionhttps://github.com/YukiTetsu/Serious_cyber_game/blob/main/README.md
 Ce projet est un serious game conçu pour enseigner et tester les compétences en cybersécurité. Le jeu est divisé en plusieurs niveaux, chacun simulant un scénario de cybersécurité que le joueur doit résoudre.
 Le premier niveau implique la correction de vulnérabilités sur une page web et la configuration d'une room Cisco pour récupérer des informations cruciales permettant d'accéder à un système sécurisé.
 
@@ -17,7 +17,8 @@ Python 3.x**
 Bibliothèques Python
 Assurez-vous d'installer les bibliothèques Python nécessaires :
 
-**pygame**
+**pygame
+hashlib**
 
 Installation
 Clonez ce dépôt sur votre machine locale :
