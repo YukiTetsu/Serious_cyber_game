@@ -11,14 +11,13 @@ Détection de phishing : Une fois les informations récupérées, le joueur doit
 
 Prérequis
 Logiciels nécessaires
-Cisco Packet Tracer : Outil de simulation de réseau.
-Python 3.x
+**Cisco Packet Tracer : Outil de simulation de réseau.
+Python 3.x**
 
 Bibliothèques Python
 Assurez-vous d'installer les bibliothèques Python nécessaires :
 
-pygame
-hashlib
+**pygame**
 
 Installation
 Clonez ce dépôt sur votre machine locale :
