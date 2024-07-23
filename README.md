@@ -36,7 +36,6 @@ Installez les bibliothèques Python requises :
 Utilisation
 
 Lancez le jeu à l'aide de la commande :
-
 python main.py
 Suivez les instructions dans le jeu pour corriger les vulnérabilités web et configurer le réseau Cisco.
 
