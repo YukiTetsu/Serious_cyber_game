@@ -27,7 +27,7 @@ height = screen.get_height()
 
 smallfont = pygame.font.SysFont('Corbel', 35)
 
-text_quit = smallfont.render('Quit', True, color)
+text_quit = smallfont.render('Quitter', True, color)
 text_options = smallfont.render('Options', True, color)
 text_play = smallfont.render('Jouer', True, color)
 text_resolution = smallfont.render('Resolution', True, color)
@@ -233,7 +233,7 @@ class EmailBox:
                         if self.selected_email.loaded_image is None:
                             self.selected_email.loaded_image = pygame.image.load(self.selected_email.image)
 
-            if self.selected_email and self.selected_email.subject == "Urgent : Mise a jour de vos informations de compte":
+            if self.selected_email and self.selected_email.subject == "Urgent : informations de compte":
                 image_rect = pygame.Rect(self.rect.right + 10, self.rect.y, self.selected_email.loaded_image.get_width(), self.selected_email.loaded_image.get_height())
                 if image_rect.collidepoint(pos):
                     local_pos = (pos[0] - image_rect.x, pos[1] - image_rect.y)
@@ -255,25 +255,25 @@ class EmailBox:
             image = pygame.transform.scale(image, (image.get_width(), image.get_height()))
             screen.blit(image, (self.rect.right + 10, self.rect.y))
 
-            if self.selected_email.subject == "Urgent : Mise a jour de vos informations de compte":
+            if self.selected_email.subject == "Urgent : informations de compte":
                 for coord in self.correct_clicks:
                     pygame.draw.circle(screen, (0, 255, 0), (self.rect.right + 10 + coord[0], self.rect.y + coord[1]), 10)
 
 def level_1_email_page():
     pygame.init()
     screen = pygame.display.set_mode((1920, 1080))
-    smallfont = pygame.font.SysFont(None, 35)
+    smallfont = pygame.font.SysFont('Corbel', 35)
     color = (255, 255, 255)
     color_light = (170, 170, 170)
     color_dark = (100, 100, 100)
 
     emails = [
-        Email("Alice", "Réunion de suivi du projet Alpha", "Hi,\n\nDon't forget we have a meeting tomorrow at 10 AM.\n\nBest,\nAlice", "picture/mail1.png"),
-        Email("Bob", "Formation sécurité informatique", "Hello,\n\nThe project update has been completed. Please review it.\n\nThanks,\nBob", "picture/mail2.png"),
-        Email("Charlie", "Mise à jour des politiques RH", "Hey,\n\nDo you want to grab lunch together tomorrow?\n\nCheers,\nCharlie", "picture/mail3.png"),
-        Email("David", "Prochaine sortie d'équipe", "Hi,\n\nPlease review the latest code changes.\n\nBest,\nDavid", "picture/mail4.png"),
-        Email("David", "Nouveau logiciel de gestion", "Hi,\n\nPlease review the latest code changes.\n\nBest,\nDavid", "picture/mail5.png"),
-        Email("David", "Urgent : Mise a jour de vos informations de compte", "Hi,\n\nPlease review the latest code changes.\n\nBest,\nDavid", "picture/mail6.png"),
+        Email("Alice", "Réunion de suivi du projet Alpha", "", "picture/mail1.png"),
+        Email("Bob", "Formation sécurité informatique", "", "picture/mail2.png"),
+        Email("Charlie", "Mise à jour des politiques RH", "", "picture/mail3.png"),
+        Email("David", "Prochaine sortie d'équipe", "", "picture/mail4.png"),
+        Email("David", "Nouveau logiciel de gestion", "", "picture/mail5.png"),
+        Email("David", "Urgent : informations de compte", "", "picture/mail6.png"),
     ]
 
     email_box = EmailBox(100, 100, 300, 600, emails)
@@ -305,7 +305,7 @@ def level_1_email_page():
             if indication_button.is_clicked(event):
                 indication_displayed = not indication_displayed
             if correction_button.is_clicked(event):
-                if email_box.selected_email and email_box.selected_email.subject == "Urgent : Mise a jour de vos informations de compte":
+                if email_box.selected_email and email_box.selected_email.subject == "Urgent : informations de compte":
                     email_box.correct_clicks = email_box.target_coords[:]  # Mark all targets as clicked
                     level_complete = True
             if level_selection_button.is_clicked(event) and level_complete:
@@ -367,8 +367,8 @@ def level_screen(level):
     login_box = InputBox(width // 2 - 70, height // 2 - 60, 140, 40)
     password_box = InputBox(width // 2 - 70, height // 2 - 10, 140, 40, is_password=True)
     submit_button = Button(width // 2 - 70, height // 2 + 60, 140, 40, color_light, color_dark, smallfont.render('Connect', True, color))
-    cisco_button = Button(width // 2 + 80, height // 2 - 60, 220, 40, color_light, color_dark, smallfont.render('Lancer Cisco', True, color))
-    web_button = Button(width // 2 + 80, height // 2 - 10, 220, 40, color_light, color_dark, smallfont.render('Lancer Web', True, color))
+    cisco_button = Button(width // 2 + 80, height // 2 - 10, 220, 40, color_light, color_dark, smallfont.render('Lancer Cisco', True, color))
+    web_button = Button(width // 2 + 80, height // 2 - 60, 220, 40, color_light, color_dark, smallfont.render('Lancer Web', True, color))
     back_button = Button(10, 10, 100, 40, color_light, color_dark, smallfont.render('Back', True, color))
 
     while True:

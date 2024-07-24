@@ -21,18 +21,19 @@ Assurez-vous d'installer les bibliothèques Python nécessaires :
 hashlib**
 
 Installation
-Clonez ce dépôt sur votre machine locale :
 
+Clonez ce dépôt sur votre machine locale :
 bash
 Copier le code
-git clone [https://github.com/votre-utilisateur/cybersecurity-serious-game.git](https://github.com/YukiTetsu/Serious_cyber_game.git)
-Naviguez dans le répertoire du projet :
+git clone (https://github.com/YukiTetsu/Serious_cyber_game.git)
 
+Naviguez dans le répertoire du projet :
 bash
 Copier le code
 cd cybersecurity-serious-game
 Installez les bibliothèques Python requises :
 
+pip install pygame
 
 Utilisation
 
